@@ -22,7 +22,7 @@
     --primary-color: #ffa898;         /* Darker Terracotta */
     --primary-light: #f3d8cb;         /* Light Terracotta */
     --secondary-color: #7a604e;       /* Darker Rich Taupe */
-    --accent-color: #5abfad;          /* Deeper Coral */
+    --accent-color: #1a7b6a;          /* Deeper Coral */
     --dark-color: #37271a;            /* Darker Brown */
     --light-color: #f8f3ed;           /* Soft Cream */
     --text-color: #3a2d24;            /* Darker Walnut */
@@ -215,7 +215,7 @@ button {
 }
 
 .btn-text {
-    color: var(--primary-color);
+    color: var(--dark-color);
     position: relative;
     display: inline-block;
     font-weight: 600;
@@ -318,7 +318,9 @@ section-header {
     z-index: 100;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
-    height: 80px; /* Add fixed height to ensure consistency */
+    height: 80px;
+    display: flex;
+    align-items: center;
 }
 
 .header-content {
@@ -389,7 +391,7 @@ section-header {
     left: 0;
     width: 0;
     height: 3px;
-    background-color: var(--dark-color);
+    background-color: var(--accent-color);
     transition: var(--transition);
 }
 
@@ -404,7 +406,7 @@ section-header {
 
 .nav-menu a.active::after {
     width: 100%;
-    background-color: var(--dark-color); 
+    background-color: var(--accent-color); 
     height: 3px;
 }
 
@@ -599,7 +601,7 @@ section-header {
     padding: var(--spacing-md);
     border-radius: var(--radius-md);
     text-align: center;
-    transition: var(--transition);
+    /* transition: var(--transition); */
     box-shadow: var(--shadow-sm);
     position: relative;
     overflow: hidden;
@@ -619,7 +621,7 @@ section-header {
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
+    /* transform: translateY(-10px); */
     box-shadow: var(--shadow-md);
 }
 
@@ -645,9 +647,9 @@ section-header {
     transition: var(--transition);
 }
 
-.service-card:hover h3 {
+/* .service-card:hover h3 {
     color: var(--primary-color);
-}
+} */
 
 .service-card p {
     color: var(--text-light);
@@ -1043,6 +1045,7 @@ section-header {
 .quote {
     margin-bottom: var(--spacing-md);
     position: relative;
+    text-align: left;
 }
 
 .quote i {
