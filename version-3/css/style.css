@@ -934,14 +934,6 @@ section-header {
     position: relative;
 }
 
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 250px);
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
-}
-
 .gallery-item {
     position: relative;
     overflow: hidden;
@@ -1361,216 +1353,6 @@ section-header {
     font-size: 1.6rem;
 }
 
-/* About Page Styles */
-.about-story {
-    padding: 5rem 0;
-}
-
-.about-story-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-}
-
-.about-story-content {
-    padding-right: 2rem;
-}
-
-.about-story-content .section-header {
-    margin-bottom: 1.5rem;
-}
-
-.about-story-content .lead {
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: var(--accent-color);
-    margin-bottom: 1.5rem;
-    font-family: var(--heading-font);
-}
-
-.about-story-content p {
-    margin-bottom: 1.2rem;
-    line-height: 1.8;
-}
-
-.about-story-image {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.about-story-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-    transition: transform 0.5s ease;
-}
-
-.about-story-image:hover img {
-    transform: scale(1.03);
-}
-
-.philosophy-section {
-    padding: 5rem 0;
-}
-
-.philosophy-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
-    margin-top: 3rem;
-}
-
-.philosophy-item {
-    background-color: var(--bg-color);
-    border-radius: 15px;
-    padding: 2.5rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    border-top: 4px solid var(--primary-color);
-}
-
-.philosophy-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.philosophy-icon {
-    margin-bottom: 1.5rem;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-color: var(--primary-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.philosophy-icon i {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-}
-
-.philosophy-item h3 {
-    font-family: var(--heading-font);
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    color: var(--dark-color);
-}
-
-.philosophy-item p {
-    line-height: 1.8;
-    color: var(--text-color);
-}
-
-/* Team Section */
-.team-section {
-    padding: 5rem 0;
-}
-
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-    margin-top: 3rem;
-}
-
-.team-member {
-    background-color: var(--bg-color);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-}
-
-.team-member:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-}
-
-.member-image {
-    position: relative;
-    height: 350px;
-    overflow: hidden;
-}
-
-.member-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.team-member:hover .member-image img {
-    transform: scale(1.05);
-}
-
-.member-social {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(66, 46, 27, 0.8), transparent);
-    padding: 1.5rem;
-    display: flex;
-    gap: 1rem;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.3s ease;
-}
-
-.team-member:hover .member-social {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.member-social a {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-.member-social a:hover {
-    background-color: var(--accent-color);
-    transform: translateY(-3px);
-}
-
-.member-info {
-    padding: 1.8rem;
-}
-
-.member-info h3 {
-    font-family: var(--heading-font);
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    color: var(--dark-color);
-}
-
-.member-title {
-    display: block;
-    font-size: 1rem;
-    color: var(--primary-color);
-    font-weight: 500;
-    margin-bottom: 1rem;
-}
-
-.member-info p {
-    line-height: 1.7;
-    color: var(--text-color);
-}
-
 /* Experience Section */
 .experience-section {
     padding: 5rem 0;
@@ -1723,8 +1505,10 @@ section-header {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    /* gap: 1rem; */
+    gap: 2rem; 
+    margin-bottom: var(--spacing-lg);
 }
+
 
 .gallery-item {
     border-radius: 15px;
@@ -1734,7 +1518,6 @@ section-header {
 
 .gallery-image {
     position: relative;
-    height: 300px;
     overflow: hidden;
 }
 
@@ -1747,45 +1530,6 @@ section-header {
 
 .gallery-item:hover .gallery-image img {
     transform: scale(1.1);
-}
-
-.gallery-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(66, 46, 27, 0.8), rgba(66, 46, 27, 0.4));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: all 0.4s ease;
-}
-
-.gallery-item:hover .gallery-overlay {
-    opacity: 1;
-}
-
-.gallery-info {
-    text-align: center;
-    padding: 2rem;
-    color: white;
-    transform: translateY(20px);
-    transition: all 0.4s ease;
-}
-
-.gallery-item:hover .gallery-info {
-    transform: translateY(0);
-}
-
-.gallery-info h3 {
-    font-family: var(--heading-font);
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-}
-
-.gallery-info p {
-    font-size: 0.95rem;
-    margin-bottom: 1.2rem;
-    opacity: 0.9;
 }
 
 .gallery-lightbox {
