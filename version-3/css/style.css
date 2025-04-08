@@ -463,6 +463,7 @@ section-header {
     color: var(--dark-color);
     line-height: 1.2;
     position: relative;
+    text-align: left;
 }
 
 .hero-content h2::after {
@@ -482,6 +483,7 @@ section-header {
     font-weight: 400;
     color: var(--text-light);
     max-width: 90%;
+    text-align: left;
 }
 
 .hero-btns {
@@ -2255,6 +2257,7 @@ section-header {
     color: var(--dark-color);
     position: relative;
     padding-bottom: var(--spacing-xs);
+    text-align: left;
 }
 
 .contact-info h2::after {
@@ -2271,6 +2274,7 @@ section-header {
     list-style: none;
     margin: 0;
     padding: 0;
+    text-align: left;
 }
 
 .contact-details li {
@@ -2304,6 +2308,7 @@ section-header {
 
 .opening-hours {
     margin-top: var(--spacing-lg);
+    text-align: left;
 }
 
 .opening-hours ul {
