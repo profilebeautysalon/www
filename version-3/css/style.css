@@ -873,94 +873,44 @@ section-header {
     padding-bottom: 0;
 }
 
-/* About Preview */
-.about-preview {
-    position: relative;
-    overflow: hidden;
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-lg);
-    align-items: center;
-}
-
-.about-image {
-    position: relative;
-    overflow: hidden;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-md);
-}
-
-.about-image img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    border-radius: var(--radius-md);
-    transition: var(--transition);
-}
-
-.about-image:hover img {
-    transform: scale(1.05);
-}
-
-.about-features {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-sm) var(--spacing-md);
-    margin: var(--spacing-md) 0;
-}
-
-.feature {
-    display: flex;
-    align-items: center;
-}
-
-.feature i {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-right: var(--spacing-sm);
-}
-
-.feature span {
-    font-weight: 600;
-    color: var(--secondary-color);
-}
-
 /* Gallery Preview */
 .gallery-preview {
     background-color: var(--light-color);
     position: relative;
 }
 
-.gallery-item {
+.gallery-preview .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: var(--spacing-lg);
+}
+
+.gallery-preview .gallery-item {
     position: relative;
     overflow: hidden;
     border-radius: var(--radius-md);
     cursor: pointer;
+    padding-bottom: 0;
+    height: auto;
 }
 
-.gallery-item:nth-child(1) {
+.gallery-preview .gallery-item:nth-child(1) {
     grid-column: span 2;
     grid-row: span 2;
 }
 
-.gallery-item img {
+.gallery-preview .gallery-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-preview .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: var(--transition);
-}
-
-.gallery-info h4 {
-    color: white;
-    margin-bottom: 5px;
-}
-
-.gallery-info span {
-    font-size: var(--small-size);
-    opacity: 0.8;
 }
 
 /* Testimonials */
@@ -1504,20 +1454,28 @@ section-header {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 2rem; 
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem; 
     margin-bottom: var(--spacing-lg);
+    grid-auto-rows: 1fr; /* Ensure equal row heights */
 }
 
-
 .gallery-item {
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    aspect-ratio: 1/1; /* This is more modern than padding-bottom */
+    height: auto;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin: 0; /* Remove any default margins */
 }
 
 .gallery-image {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -1530,126 +1488,6 @@ section-header {
 
 .gallery-item:hover .gallery-image img {
     transform: scale(1.1);
-}
-
-.gallery-lightbox {
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    background-color: var(--primary-color);
-    color: white;
-    line-height: 45px;
-    transition: all 0.3s ease;
-}
-
-.gallery-lightbox:hover {
-    background-color: var(--accent-color);
-    transform: scale(1.1);
-}
-
-/* Instagram Section */
-.instagram-section {
-    padding: 4rem 0;
-}
-
-.instagram-feed {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    margin-top: 3rem;
-}
-
-.insta-item {
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    aspect-ratio: 1 / 1;
-}
-
-.insta-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.insta-overlay {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(66, 46, 27, 0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
-.insta-item:hover .insta-overlay {
-    opacity: 1;
-}
-
-.insta-item:hover img {
-    transform: scale(1.1);
-}
-
-.insta-overlay i {
-    font-size: 2rem;
-    color: white;
-}
-
-.instagram-follow {
-    text-align: center;
-    margin-top: 2.5rem;
-}
-
-.instagram-follow .btn {
-    padding: 0.8rem 2rem;
-}
-
-.instagram-follow .btn i {
-    margin-right: 0.5rem;
-}
-
-/* Lightbox Modal */
-.lightbox-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 1000;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-}
-
-.lightbox-container {
-    position: relative;
-    max-width: 90%;
-    max-height: 90%;
-}
-
-.lightbox-image {
-    max-width: 100%;
-    max-height: 90vh;
-    border-radius: 10px;
-}
-
-.lightbox-close {
-    position: absolute;
-    top: -40px;
-    right: 0;
-    color: white;
-    font-size: 2.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.lightbox-close:hover {
-    color: var(--primary-color);
 }
 
 /* Contact Page Styles */
