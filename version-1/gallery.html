@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profile Beauty Salon Gallery - View our work and beauty transformations">
+    <meta name="keywords" content="beauty salon, gallery, hair styling, makeup, nail art, beauty transformations">
+    <title>Our Gallery - Profile Beauty Salon</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Profile Beauty Salon</h1>
+            </div>
+            <nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Gallery</h1>
+            <p>Explore our portfolio of beautiful transformations</p>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-intro">
+                <p>Browse through our gallery showcasing the exceptional work of our talented beauty professionals. From stunning hair transformations to elegant makeup looks and artistic nail designs, our gallery represents our commitment to excellence and creativity.</p>
+            </div>
+
+            <div class="gallery-filter">
+                <ul>
+                    <li class="active" data-filter="all">All</li>
+                    <li data-filter="hair">Hair</li>
+                    <li data-filter="makeup">Makeup</li>
+                    <li data-filter="nails">Nails</li>
+                    <li data-filter="spa">Spa</li>
+                </ul>
+            </div>
+
+            <div class="gallery-container">
+                <!-- Hair category -->
+                <div class="gallery-item" data-category="hair">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">Hair 1</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Elegant Updo</h3>
+                            <p>Hair styling for special occasions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="hair">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">Hair 2</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Balayage Highlights</h3>
+                            <p>Natural-looking color transition</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="hair">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">Hair 3</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Precision Bob Cut</h3>
+                            <p>Clean lines and modern styling</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="hair">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">Hair 4</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Beach Waves</h3>
+                            <p>Effortless and relaxed styling</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Makeup category -->
+                <div class="gallery-item" data-category="makeup">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">Makeup 1</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Bridal Makeup</h3>
+                            <p>Elegant and timeless look</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="makeup">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">Makeup 2</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Evening Glam</h3>
+                            <p>Bold eyes and defined features</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="makeup">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">Makeup 3</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Natural Daytime Look</h3>
+                            <p>Fresh-faced and glowing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nails category -->
+                <div class="gallery-item" data-category="nails">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">Nails 1</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>French Manicure</h3>
+                            <p>Classic and sophisticated</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="nails">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">Nails 2</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Gel Art Design</h3>
+                            <p>Intricate patterns and details</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spa category -->
+                <div class="gallery-item" data-category="spa">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">Spa 1</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Relaxing Spa Environment</h3>
+                            <p>Tranquil setting for treatments</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="spa">
+                    <div class="gallery-image">
+                        <div class="image-placeholder">Spa 2</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>Facial Treatment</h3>
+                            <p>Revitalized and glowing skin</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready for Your Own Transformation?</h2>
+                <p>Book an appointment with our expert stylists and experience the Profile Beauty Salon difference.</p>
+                <a href="contact.html" class="btn">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Profile Beauty Salon</h3>
+                    <p>Your destination for beauty and relaxation</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Profile Beauty Salon. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Gallery Filter Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.gallery-filter li');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active filter button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

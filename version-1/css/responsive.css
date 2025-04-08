@@ -1,0 +1,138 @@
+/* Version 1: Responsive Styles */
+
+/* Large Devices (Desktops & Laptops) */
+@media screen and (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media screen and (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    html {
+        font-size: 56.25%; /* 9px = 1rem */
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    .footer-social {
+        grid-column: span 2;
+        margin-top: var(--spacing-md);
+    }
+}
+
+/* Small Devices (Landscape Phones) */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    html {
+        font-size: 50%; /* 8px = 1rem */
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 7rem;
+        left: -100%;
+        width: 80%;
+        height: calc(100vh - 7rem);
+        background-color: var(--white-color);
+        flex-direction: column;
+        padding: var(--spacing-lg);
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        margin: 0 0 var(--spacing-md) 0;
+    }
+    
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        order: -1;
+    }
+    
+    .about-image .image-placeholder {
+        height: 300px;
+    }
+    
+    .hero-content h2 {
+        font-size: 4rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.8rem;
+    }
+}
+
+/* Extra Small Devices (Portrait Phones) */
+@media screen and (max-width: 576px) {
+    .container {
+        width: 100%;
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .hero {
+        height: 60vh;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-social {
+        grid-column: span 1;
+    }
+    
+    .hero-content h2 {
+        font-size: 3.2rem;
+    }
+    
+    .client-name {
+        font-size: 1.6rem;
+    }
+    
+    .quote p {
+        font-size: 1.8rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2.8rem;
+    }
+} 
