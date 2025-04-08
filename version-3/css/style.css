@@ -671,6 +671,7 @@ section-header {
 .service-list {
     display: grid;
     gap: var(--spacing-md);
+    text-align: left;
 }
 
 .service-item {
