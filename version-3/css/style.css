@@ -253,15 +253,18 @@ button {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
+    text-align: center;
 }
 
 .in-view {
     opacity: 1;
     transform: translateY(0);
+    margin-bottom: var(--spacing-lg);
+
 }
 
 /* Section Headers */
-.header {
+section-header {
     text-align: center;
     margin-bottom: var(--spacing-lg);
     
@@ -274,6 +277,7 @@ button {
     position: relative;
     display: inline-block;
     padding-bottom: var(--spacing-sm);
+    text-align: center;
 }
 
 .section-header h2::after {
