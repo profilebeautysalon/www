@@ -18,7 +18,7 @@
 /* Medium Devices (Tablets) */
 @media screen and (max-width: 992px) {
     .container {
-        max-width: 720px;
+        max-width: 85%;
     }
     
     html {
@@ -106,15 +106,16 @@
 /* Small Devices (Landscape Phones) */
 @media screen and (max-width: 768px) {
     .container {
-        max-width: 540px;
+        max-width: 90%;
     }
     
     html {
-        font-size: 50%; /* 8px = 1rem */
+        font-size: 60%; /* 8px = 1rem */
     }
     
     body {
-        padding-top: 70px; /* Reduce top padding on smaller screens */
+        padding-top: 15%; /* Reduce top padding on smaller screens */
+        text-align: center;
     }
     
     .header {
@@ -160,13 +161,20 @@
     
     .hero-content h2 {
         font-size: 3.5rem;
+        text-align: center;
+    }
+
+    .hero-content p {
+        text-align: center;
     }
     
     .hero-image {
         height: 350px !important;
         max-width: 90%;
+        border-radius: 0;
+        box-shadow: 0;
     }
-    
+
     .about-features {
         grid-template-columns: 1fr;
     }
