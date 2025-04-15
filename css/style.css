@@ -320,6 +320,7 @@ section-header {
     transition: var(--transition);
     height: 80px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -352,6 +353,12 @@ section-header {
     display: flex;
     align-items: center;
     margin-right: 2px;
+}
+
+.logo h1 > span > .accent-font {
+    display: flex;
+    align-items: center;
+    line-height: 1;
 }
 
 .logo img {
@@ -414,9 +421,10 @@ section-header {
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
+    width:  25px;
     height: 22px;
     cursor: pointer;
+    background-color: white;
 }
 
 .menu-toggle span {
@@ -427,7 +435,7 @@ section-header {
 }
 
 .menu-toggle.active span:nth-child(1) {
-    transform: translateY(10px) rotate(45deg);
+    transform: rotate(45deg) translate(5px, 5px);
 }
 
 .menu-toggle.active span:nth-child(2) {
@@ -435,7 +443,7 @@ section-header {
 }
 
 .menu-toggle.active span:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg);
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* Hero Section */
