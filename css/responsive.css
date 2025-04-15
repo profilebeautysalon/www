@@ -219,7 +219,19 @@
     .services-grid {
         gap: var(--spacing-sm);
     }
-    
+
+    .service-image-container {
+        display: none;
+    }
+
+    .service-category-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+
     .gallery-item {
         height: 100%;
         aspect-ratio: 1/1;
