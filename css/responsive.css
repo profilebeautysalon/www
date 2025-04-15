@@ -229,7 +229,15 @@
         flex-direction: column;
     }
 
+    .tabs-nav {
+        display: flex;
+        flex-direction: column;
+    }
 
+    .tabs-nav li {
+        display: flex;
+        flex-direction: column;
+    }
 
 
     .gallery-item {
