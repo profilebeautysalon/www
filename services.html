@@ -32,38 +32,38 @@
     </section>
     
     <!-- Service Tabs -->
-    <section class="section service-tabs-section">
+    <section class="section service-tabs-section" id="services">
         <div class="container">
             <div class="service-tabs animate">
                 <ul class="tabs-nav">
-                    <li class="tab-link active" data-tab="hair-tab">
+                    <li class="tab-link active" data-tab="hair">
                         <i class="fas fa-cut"></i>
                         <span>Hair Treatments</span>
                     </li>
-                    <li class="tab-link" data-tab="facial-tab">
+                    <li class="tab-link" data-tab="facial">
                         <i class="fas fa-spa"></i>
                         <span>Facial Treatments</span>
                     </li>
-                    <li class="tab-link" data-tab="hair-removal-tab">
+                    <li class="tab-link" data-tab="hair-removal">
                         <i class="fas fa-hand-sparkles"></i>
                         <span>Hair Removal</span>
                     </li>
-                    <li class="tab-link" data-tab="body-tab">
+                    <li class="tab-link" data-tab="body">
                         <i class="fas fa-hot-tub"></i>
                         <span>Body Treatments</span>
                     </li>
-                    <li class="tab-link" data-tab="slimming-tab">
+                    <li class="tab-link" data-tab="slimming">
                         <i class="fas fa-weight"></i>
                         <span>Slimming</span>
                     </li>
-                    <li class="tab-link" data-tab="other-tab">
+                    <li class="tab-link" data-tab="other">
                         <i class="fas fa-magic"></i>
                         <span>Other Services</span>
                     </li>
                 </ul>
                 
                 <!-- Hair Treatments Tab -->
-                <div id="hair-tab" class="tab-content active">
+                <div id="hair" class="tab-content active">
                     <div class="tab-header">
                         <h2>Hair Treatments</h2>
                         <p>Professional hair services to keep your locks looking their best</p>
@@ -198,7 +198,7 @@
                 </div>
                 
                 <!-- Facial Treatments Tab -->
-                <div id="facial-tab" class="tab-content">
+                <div id="facial" class="tab-content">
                     <div class="tab-header">
                         <h2>Facial Treatments</h2>
                         <p>Customized therapies that reveal your natural radiance</p>
@@ -368,7 +368,7 @@
                 </div>
                 
                 <!-- Hair Removal Tab -->
-                <div id="hair-removal-tab" class="tab-content">
+                <div id="hair-removal" class="tab-content">
                     <div class="tab-header">
                         <h2>Hair Removal</h2>
                         <p>Permanent and semi-permanent solutions for unwanted hair</p>
@@ -478,7 +478,7 @@
                 </div>
                 
                 <!-- Body Treatments Tab -->
-                <div id="body-tab" class="tab-content">
+                <div id="body" class="tab-content">
                     <div class="tab-header">
                         <h2>Body Treatments & Massage</h2>
                         <p>Rejuvenating treatments that nurture body and mind</p>
@@ -577,7 +577,7 @@
                 </div>
                 
                 <!-- Slimming Tab -->
-                <div id="slimming-tab" class="tab-content">
+                <div id="slimming" class="tab-content">
                     <div class="tab-header">
                         <h2>Slimming Treatments</h2>
                         <p>Advanced techniques for body contouring and cellulite reduction</p>
@@ -649,7 +649,7 @@
                 </div>
                 
                 <!-- Other Services Tab -->
-                <div id="other-tab" class="tab-content">
+                <div id="other" class="tab-content">
                     <div class="tab-header">
                         <h2>Other Services</h2>
                         <p>Additional beauty services to complete your salon experience</p>
@@ -724,28 +724,56 @@
     <script src="js/components.js"></script>
     <script src="js/main.js"></script>
     <script>
-        // Tabs functionality
         document.addEventListener('DOMContentLoaded', function() {
             const tabLinks = document.querySelectorAll('.tab-link');
             const tabContents = document.querySelectorAll('.tab-content');
             
+            // Function to activate a specific tab
+            function activateTab(tabId) {
+                // Remove active class from all tabs
+                tabLinks.forEach(tab => tab.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to current tab
+                const targetTab = document.querySelector(`[data-tab="${tabId}"]`);
+                if (targetTab) {
+                    targetTab.classList.add('active');
+                    const tabContent = document.getElementById(tabId);
+                    if (tabContent) {
+                        tabContent.classList.add('active');
+                        
+                        // Animate elements in the tab
+                        const animateElements = document.querySelectorAll('#' + tabId + ' .animate');
+                        animateElements.forEach(element => {
+                            element.classList.add('in-view');
+                        });
+                    }
+                }
+            }
+
+            // Handle tab clicks
             tabLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    // Remove active class from all tabs
-                    tabLinks.forEach(tab => tab.classList.remove('active'));
-                    tabContents.forEach(content => content.classList.remove('active'));
-                    
-                    // Add active class to current tab
-                    this.classList.add('active');
+                link.addEventListener('click', function(e) {
                     const tabId = this.getAttribute('data-tab');
-                    document.getElementById(tabId).classList.add('active');
-                    
-                    // Animate elements in the tab
-                    const animateElements = document.querySelectorAll('#' + tabId + ' .animate');
-                    animateElements.forEach(element => {
-                        element.classList.add('in-view');
-                    });
+                    // Update URL hash without scrolling
+                    history.pushState(null, null, `#${tabId}`);
+                    activateTab(tabId);
                 });
+            });
+
+            // Check for hash in URL on page load
+            if (window.location.hash) {
+                const tabId = window.location.hash.substring(1); // Remove the # symbol
+                activateTab(tabId);
+            } else {
+                // Activate default tab if no hash present
+                activateTab('hair');
+            }
+
+            // Handle browser back/forward buttons
+            window.addEventListener('hashchange', function() {
+                const tabId = window.location.hash.substring(1);
+                activateTab(tabId);
             });
         });
     </script>
